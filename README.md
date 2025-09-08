@@ -169,6 +169,27 @@ We then projected the clusters into 2D space with PCA for visualization.
 - The PCA plot below shows two distinct clusters:
 ![Clustering PCA](clustering_PCA_plot.png)
 
+- To validate these clusters, we compared them with the actual disease labels (`condition`) using a crosstab:
+![Validation](clustering_cross_tab.jpg)
+
+### Interpretation
+
+- **Cluster 0 (blue in plot):**  
+  - Majority are **no disease (132)** but includes **43 disease cases**.  
+  - Represents a group of mostly low-risk patients, but with some misclassified diseased patients.  
+
+- **Cluster 1 (green in plot):**  
+  - Majority are **disease cases (94)**, with fewer **no disease cases (28)**.  
+  - Represents a high-risk cluster that the algorithm could separate well.  
+
+- **Key insight:**  
+  - K-means clustering successfully separated patients into **two clinically meaningful groups**:  
+    - A **low-risk cluster** (mainly healthy patients).  
+    - A **high-risk cluster** (mainly diseased patients).  
+  - While clustering is unsupervised (it doesn’t use the labels), the alignment with actual outcomes shows that patient features carry strong discriminative power.  
+
+📊 **Takeaway:** Even without explicit labels, unsupervised learning (K-means) can uncover patterns that approximate disease risk groups, supporting its potential use in exploratory healthcare analytics.
+
 
 
 
