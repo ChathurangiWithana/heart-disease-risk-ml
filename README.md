@@ -124,12 +124,13 @@ To reduce noise and improve interpretability, we compared **three feature select
 
 
 <p align="center">
-  <img src="regre no fea select 1.png" width="45%" />
-  <img src="tree based predict with feature select.png" width="45%" />
+  <img src="regre no fea select 1.jpg" width="45%" />
+  <img src="tree based predict with feature select.jpg" width="45%" />
+  
 </p>
 <p align="center">
-  <img src="non scaled linear.png" width="45%" />
-  <img src="scaled linear.png" width="45%" />
+  <img src="non scaled linear.jpg" width="45%" />
+  <img src="scaled linear.jpg" width="45%" />
 </p>
 
 
