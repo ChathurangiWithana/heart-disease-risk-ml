@@ -155,10 +155,27 @@ Predicting `thalach` provided medical and machine learning insights.
 - For regression, **Linear Regression with scaled feature selection** offered the clearest and most interpretable model, while tree-based methods struggled.  
  
 
-## 🔸 Clustering
+## 🔸 Clustering Analysis
+
+To explore whether patients can be grouped into different **risk profiles**, we applied **K-means clustering** using key features (age, chest pain type, cholesterol, ST depression, etc.).  
+We then projected the clusters into 2D space with PCA for visualization.
+
 - Target: Can we group patients into **low-risk** and **high-risk** profiles without using the disease label?
 - Features: age, chest pain type, cholesterol, oldpeak, resting BP, thalach, slope  
-- Method: KMeans (k=2), PCA visualization  
-- Result: Two clusters emerged:  
-  - **Cluster 0** → Mostly low-risk patients (25% disease prevalence)  
-  - **Cluster 1** → Mostly high-risk patients (77% disease prevalence)  
+- Method: KMeans (k=2), PCA visualization
+
+### Results
+
+- The PCA plot below shows two distinct clusters:
+![Clustering PCA](clustering_PCA_plot.png)
+
+
+
+
+
+
+
+
+
+
+
