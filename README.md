@@ -123,14 +123,16 @@ To reduce noise and improve interpretability, we compared **three feature select
 </p>
 
 
-<p align="center">
-  <img src="regre no fea select 1.jpg" width="45%" />
-  <img src="tree based predict with feature select.jpg" width="45%" />
-  
+**Row 1: No Feature Selection vs Tree-based Features**
+<p align="center"> 
+  <img src="regre no fea select 1.jpg" width="45%" /> 
+  <img src="tree based predict with feature select.jpg" width="45%" /> 
 </p>
-<p align="center">
-  <img src="non scaled linear.jpg" width="45%" />
-  <img src="scaled linear.jpg" width="45%" />
+
+**Row 2: Linear Features (non-scaled vs scaled)**
+<p align="center"> 
+  <img src="non scaled linear.jpg" width="45%" /> 
+  <img src="scaled linear.jpg" width="45%" /> 
 </p>
 
 
@@ -170,7 +172,13 @@ We then projected the clusters into 2D space with PCA for visualization.
 ![Clustering PCA](clustering_PCA_plot.png)
 
 - To validate these clusters, we compared them with the actual disease labels (`condition`) using a crosstab:
-![Validation](clustering_cross_tab.jpg)
+
+| Cluster | No Disease (0) | Disease (1) |
+|---------|----------------|-------------|
+| 0       | 132            | 43          |
+| 1       | 28             | 94          |
+
+
 
 ### Interpretation
 
@@ -189,6 +197,24 @@ We then projected the clusters into 2D space with PCA for visualization.
   - While clustering is unsupervised (it doesn’t use the labels), the alignment with actual outcomes shows that patient features carry strong discriminative power.  
 
 📊 **Takeaway:** Even without explicit labels, unsupervised learning (K-means) can uncover patterns that approximate disease risk groups, supporting its potential use in exploratory healthcare analytics.
+
+
+## 🔸 Overall Conclusion
+
+In this project, we explored three core machine learning tasks on a heart disease dataset:
+
+- **Classification:** Predicted presence of heart disease using multiple models, where Logistic Regression achieved the highest accuracy.  
+- **Regression:** Modeled maximum heart rate (`thalach`) as a continuous outcome, with linear regression (scaled features) providing the most interpretable results.  
+- **Clustering:** Applied unsupervised learning (K-means) to group patients into low-risk and high-risk clusters, which aligned closely with actual disease outcomes.  
+
+### Significance of Machine Learning in Healthcare
+This project illustrates how machine learning can:  
+- **Support early detection:** Classification models help identify patients at higher risk of heart disease.  
+- **Provide deeper insights:** Regression analysis highlights which clinical factors most strongly influence heart performance.  
+- **Discover hidden patterns:** Clustering reveals natural patient groupings that may guide preventive care and treatment strategies.  
+
+📊 While these models are not a replacement for clinical judgment, they demonstrate the potential of ML to complement healthcare decision-making, improve efficiency, and uncover actionable insights from patient data.
+
 
 
 
