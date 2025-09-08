@@ -35,25 +35,35 @@ This project applies multiple machine learning approaches to the UCI Heart Disea
 ## ⚙️ Methods
 ## 🔸 Classification: Heart Disease Prediction
 
-We applied several machine learning models to predict the presence of heart disease (`condition`) from patient features.
+We applied several machine learning models to predict the presence of heart disease (`condition`) from patient features under two setups:
 
-### With and without feature scaling
-- **No feature scaling**: Models like Logistic Regression and Random Forest already performed well without scaling.
-- **With feature scaling**: Scaling improved performance for distance-based models such as KNN and SVM, but had little effect on tree-based models.
+- **No Feature Scaling**
+- **With Feature Scaling**
 
-### Results (test set)
-- **Logistic Regression**: ~83% accuracy (best performing, balanced precision & recall)  
-- **Random Forest**: ~77% accuracy, good recall but slightly lower overall accuracy  
-- **SVM**: ~67% accuracy, improved with scaling but still weaker  
-- **KNN**: ~50% accuracy without scaling, improved with scaling but still underperformed  
-- **Decision Tree**: ~73% accuracy, risk of overfitting  
+---
 
-### Interpretation
-- Logistic Regression provided the most reliable and interpretable performance.  
-- Feature scaling had a clear impact on models sensitive to distance metrics (KNN, SVM).  
-- Tree-based models (Random Forest, Decision Tree) were less affected by scaling.  
+### 🔹 No Feature Scaling
+<p align="center">
+  <img src="images/classi_no_fea_1.jpg" width="30%" />
+  <img src="images/classi_no_fea_2.jpg" width="30%" />
+  <img src="images/classi_no_fea_3.jpg" width="30%" />
+</p>
 
-**Conclusion:** Logistic Regression was the best model for this classification task, while scaling was critical for distance-based methods.
+### 🔹 With Feature Scaling
+<p align="center">
+  <img src="C:\Users\Chathu\Desktop\ML for Health Data Analysis Guided Project\images\classi_fea_1.jpg" width="30%" />
+  <img src="images/classi_fea_2.jpg" width="30%" />
+  <img src="images/classi_fea_3.jpg" width="30%" />
+</p>
+
+---
+
+### 📝 Interpretation
+- **Logistic Regression** consistently performed best (~83% accuracy, balanced precision/recall).  
+- **Random Forest & Decision Tree** worked reasonably well but risked overfitting.  
+- **SVM and KNN** showed major improvements when scaling was applied (KNN jumped from ~50% → ~77%).  
+- **Conclusion:** Scaling is essential for distance-based models, while tree-based models are scale-invariant. Logistic Regression was the overall best performer.
+
 
 
 ### 🔸 Regression
