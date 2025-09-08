@@ -62,8 +62,9 @@ We applied several machine learning models to predict the presence of heart dise
 - **Logistic Regression** consistently performed best (~83% accuracy, balanced precision/recall).  
 - **Random Forest & Decision Tree** worked reasonably well but risked overfitting.  
 - **SVM and KNN** showed major improvements when scaling was applied (KNN jumped from ~50% → ~77%).  
-### 📝 Conclusion
-- **Scaling** is essential for distance-based models, while tree-based models are scale-invariant. **Logistic Regression was the overall best performer**.
+
+📊 **Conclusion:**
+Scaling is essential for distance-based models, while tree-based models are scale-invariant. **Logistic Regression was the overall best performer**.
 
 
 
@@ -110,8 +111,29 @@ To reduce noise and improve interpretability, we compared **three feature select
 
 
 ---
+### Regression Results: Actual vs Predicted Max Heart Rate
 
-### Results and Interpretation
+<p align="center">
+  <img src="regre no feat select plot.png" width="45%" />
+  <img src="tree based.png" width="45%" />
+</p>
+<p align="center">
+  <img src="non scaled linear plot.png" width="45%" />
+  <img src="scaled linear plot.png" width="45%" />
+</p>
+
+
+<p align="center">
+  <img src="regre no fea select 1.png" width="45%" />
+  <img src="tree based predict with feature select.png" width="45%" />
+</p>
+<p align="center">
+  <img src="non scaled linear.png" width="45%" />
+  <img src="scaled linear.png" width="45%" />
+</p>
+
+
+### Interpretation
 - **Linear Regression with selected features (scaled)** explained ~39–42% of variance in maximum heart rate.  
 - **Tree-based models (Decision Tree, Random Forest)** performed worse, with negative R² in some cases, suggesting overfitting and poor generalization.  
 - **Key takeaway:** Maximum heart rate is partially predictable from baseline clinical features, but significant individual variation remains.  
@@ -119,7 +141,10 @@ To reduce noise and improve interpretability, we compared **three feature select
   - **Age** (older patients achieve lower max HR)  
   - **Exercise-induced angina** (presence lowers max HR)  
   - **ST slope** (abnormal slopes associated with reduced HR)  
-  - **Chest pain type** (asymptomatic/atypical pain linked to lower HR)  
+  - **Chest pain type** (asymptomatic/atypical pain linked to lower HR)
+
+
+
 
 ---
 
